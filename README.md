@@ -1,6 +1,3 @@
-# Arbetsprov-Flutter
-Arbetsprov för Flutter
-
 Alster Arbetsprov - Flutter
 ===============================
 Uppgiften går ut på att implementera sortering av en lista av radio program från P3.
