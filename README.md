@@ -5,7 +5,8 @@ Alster Arbetsprov - Flutter
 ===============================
 Uppgiften går ut på att implementera sortering av en lista av radio program från P3.
 
-Forka detta projekt och lös uppgifterna nedan:
+Forka detta projekt och lös uppgifterna nedan.
+När du är klar så skapar du en pull-request till vår branch som vi sedan går igenom tillsammans.
 
 ## Uppgifter
 * Sortera programmen i alfabetisk ordning på 
