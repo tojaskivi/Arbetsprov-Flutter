@@ -9,7 +9,7 @@ Forka detta projekt och lös uppgifterna nedan.
 När du är klar så skapar du en pull-request till vår branch som vi sedan går igenom tillsammans.
 
 ## Uppgifter
-* Sortera programmen i alfabetisk ordning på 
+* Sortera programmen i alfabetisk ordning
 *	Användaren ska kunna markera program som favoriter
 *	Favoriter ska ha ett annat utseende (valfritt)
 *	Favoriter ska vara högst upp i listan, sorterade i alfabetisk ordning
