@@ -1,0 +1,29 @@
+{
+  "description": "Sändes 2006-2007. Vi tar upp ditt mejlade åtal. Vi utreder, argumenterar och dömer - allt efter tycke och smak.",
+  "programcategory": {
+    "id": 133,
+    "name": "Humor"
+  },
+  "broadcastinfo": "Programmet uppdateras inte.",
+  "email": "",
+  "phone": "",
+  "programurl": "https://sverigesradio.se/default.aspx?programid=1123",
+  "programslug": "hejdomstol",
+  "programimage": "https://static-cdn.sr.se/images/1123/2938021_512_512.jpg?preset=api-default-square",
+  "programimagetemplate": "https://static-cdn.sr.se/images/1123/2938021_512_512.jpg",
+  "programimagewide": "https://static-cdn.sr.se/images/1123/2365112_176_132.jpg?preset=api-default-rectangle",
+  "programimagetemplatewide": "https://static-cdn.sr.se/images/1123/2365112_176_132.jpg",
+  "socialimage": "https://static-cdn.sr.se/images/1123/2938021_512_512.jpg?preset=api-default-square",
+  "socialimagetemplate": "https://static-cdn.sr.se/images/1123/2938021_512_512.jpg",
+  "socialmediaplatforms": [],
+  "channel": {
+    "id": 164,
+    "name": "P3"
+  },
+  "archived": true,
+  "hasondemand": false,
+  "haspod": true,
+  "responsibleeditor": "Ulla Svensson",
+  "id": 1123,
+  "name": "Hej Domstol"
+}
