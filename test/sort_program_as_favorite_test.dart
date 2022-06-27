@@ -22,7 +22,11 @@ class MockProgramsReposistory extends ProgramsRepository {
 }
 
 class MockIsFavoriteRepository extends FavoriteRepository {
-  final favorites = [2, 4, 6];
+  final favorites = [
+    Program(id: "2", name: "ccc"),
+    Program(id: "4", name: "bbb"),
+    Program(id: "6", name: "aaa")
+  ];
 
   @override
   bool isFavorite(Program program) {
@@ -41,11 +45,14 @@ class MockIsFavoriteRepository extends FavoriteRepository {
 }
 
 void main() {
-  test('Test correct sort order of getProgramsSortedAsFavorites useCase', () async {
+  test('Test correct sort order of getProgramsSortedAsFavorites useCase',
+      () async {
     final injector = GetIt.instance;
     injector
-      ..registerLazySingleton<ProgramsRepository>(() => MockProgramsReposistory())
-      ..registerLazySingleton<FavoriteRepository>(() => MockIsFavoriteRepository())
+      ..registerLazySingleton<ProgramsRepository>(
+          () => MockProgramsReposistory())
+      ..registerLazySingleton<FavoriteRepository>(
+          () => MockIsFavoriteRepository())
       ..registerLazySingleton<GetPrograms>(() => GetPrograms())
       ..registerLazySingleton<IsFavoriteProgram>(() => IsFavoriteProgram());
 

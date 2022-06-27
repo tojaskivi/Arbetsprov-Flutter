@@ -6,10 +6,12 @@ import 'package:kodprov/src/domain/repositories/programs_repository.dart';
 class ProgramsRepositoryImpl extends ProgramsRepository {
   final ProgramsDataSource _programsDataSource;
 
-  ProgramsRepositoryImpl() : _programsDataSource = GetIt.I<ProgramsDataSource>();
+  ProgramsRepositoryImpl()
+      : _programsDataSource = GetIt.I<ProgramsDataSource>();
 
   @override
   Future<List<Program>> getPrograms() async {
-    return _programsDataSource.getPrograms().then((list) => list.map((programModel) => programModel.toDomainEntity()).toList());
+    return _programsDataSource.getPrograms().then((list) =>
+        list.map((programModel) => programModel.toDomainEntity()).toList());
   }
 }

@@ -16,11 +16,14 @@ void setupDependencies() async {
   // Repositories
   serviceLocator
     ..registerLazySingleton<ProgramsRepository>(() => ProgramsRepositoryImpl())
-    ..registerLazySingleton<ProgramsDataSource>(() => RemoteProgramsDataSource())
+    ..registerLazySingleton<ProgramsDataSource>(
+        () => RemoteProgramsDataSource())
     ..registerLazySingleton<GetPrograms>(() => GetPrograms())
     ..registerLazySingleton<FavoriteRepository>(() => FavoriteRepositoryImpl())
     ..registerLazySingleton<SetFavoriteProgram>(() => SetFavoriteProgram())
     ..registerLazySingleton<IsFavoriteProgram>(() => IsFavoriteProgram())
-    ..registerLazySingleton<RemoveFavoriteProgram>(() => RemoveFavoriteProgram())
-    ..registerLazySingleton<GetProgramsSortedAsFavorites>(() => GetProgramsSortedAsFavorites());
+    ..registerLazySingleton<RemoveFavoriteProgram>(
+        () => RemoveFavoriteProgram())
+    ..registerLazySingleton<GetProgramsSortedAsFavorites>(
+        () => GetProgramsSortedAsFavorites());
 }

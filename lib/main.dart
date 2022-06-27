@@ -16,12 +16,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Kodprov',
       home: Scaffold(
+        backgroundColor: Colors.deepPurple[200],
         appBar: AppBar(
+          elevation: 0,
           title: const Text('Program i P3'),
+          backgroundColor: Colors.deepPurple,
         ),
         body: SafeArea(
-          child: Center(
-            child: ProgramsListWidget(viewModel: ProgramsViewModel()),
+          child: ProgramsListWidget(
+            viewModel: ProgramsViewModel(),
           ),
         ),
       ),

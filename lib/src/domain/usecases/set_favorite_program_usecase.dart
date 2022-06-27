@@ -8,6 +8,7 @@ class SetFavoriteProgram {
   SetFavoriteProgram() : _favoritesRepository = GetIt.I<FavoriteRepository>();
 
   void call(Program program) {
+    print("Second step");
     _favoritesRepository.setFavorite(program);
   }
 }

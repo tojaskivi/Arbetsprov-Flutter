@@ -23,8 +23,11 @@ class ProgramsViewModel {
       : _getProgramsSortedAsFavorites = GetIt.I<GetProgramsSortedAsFavorites>(),
         _isFavoriteProgram = GetIt.I<IsFavoriteProgram>(),
         _setFavoriteProgram = GetIt.I<SetFavoriteProgram>(),
-        _removeFavoriteProgram = GetIt.I<RemoveFavoriteProgram>() {
-    Future.microtask(() async => streamController.add(await _getProgramsSortedAsFavorites()));
+        _removeFavoriteProgram = GetIt.I<RemoveFavoriteProgram>()
+  // _favorites = GetIt.I<GetFavorites>()
+  {
+    Future.microtask(() async =>
+        streamController.add(await _getProgramsSortedAsFavorites()));
     programs = streamController.stream;
   }
 
@@ -52,5 +55,13 @@ class ProgramsViewModel {
 
   bool isFavorite(Program program) {
     return _isFavoriteProgram(program);
+  }
+
+  void play(Program program) {
+    print("Play: Not yet implemented");
+  }
+
+  void goToProgram(Program program) {
+    print("Go to program: Not yet implemented");
   }
 }
