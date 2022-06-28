@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kodprov/src/domain/entities/program.dart';
 import 'package:kodprov/src/injection.dart';
 import 'package:kodprov/src/presentation/views/programs_list.dart';
 import 'package:kodprov/src/presentation/views/programs_view_model.dart';
@@ -16,11 +17,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Kodprov',
       home: Scaffold(
-        backgroundColor: Colors.deepPurple[200],
+        backgroundColor: Colors.white,
         appBar: AppBar(
-          elevation: 0,
-          title: const Text('Program i P3'),
-          backgroundColor: Colors.deepPurple,
+          elevation: 2,
+          title: const Text(
+            'Program i P3',
+            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+          ),
+          backgroundColor: Colors.white,
         ),
         body: SafeArea(
           child: ProgramsListWidget(
@@ -28,6 +32,9 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
+      routes: {
+        ProgramPage.routeName: (context) => const ProgramPage(),
+      },
     );
   }
 }

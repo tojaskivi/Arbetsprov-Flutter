@@ -9,6 +9,7 @@ class SetFavoriteProgram {
 
   void call(Program program) {
     print("Second step");
+    print(program.id);
     _favoritesRepository.setFavorite(program);
   }
 }

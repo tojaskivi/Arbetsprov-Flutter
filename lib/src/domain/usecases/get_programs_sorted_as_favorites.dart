@@ -19,20 +19,27 @@ class GetProgramsSortedAsFavorites {
     // then the other programs sorted alphabetically.
 
     List<Program> programs = await _getPrograms();
-    List<Program> favorites = _favoriteRepository.favorites;
-    // List<Program> favorites = _favorites;
-
-    favorites.sort(
-      (Program a, Program b) => a.name.compareTo(b.name),
-    );
+    List<int> favorites = _favoriteRepository.favorites;
 
     programs.sort(
       (Program a, Program b) => a.name.compareTo(b.name),
     );
 
-    programs.removeWhere(
-        (program) => favorites.any((favorite) => favorite.id == program.id));
+    List<Program> modifiedFavorites = [];
 
-    return [...favorites, ...programs];
+    for (var favorite in favorites) {
+      modifiedFavorites.add(getProgram(favorite, programs));
+    }
+
+    modifiedFavorites.sort((Program a, Program b) => a.name.compareTo(b.name));
+
+    programs.removeWhere((program) =>
+        favorites.any((favorite) => favorite.toString() == program.id));
+
+    return [...modifiedFavorites, ...programs];
+  }
+
+  Program getProgram(int id, List<Program> programs) {
+    return programs.singleWhere((e) => id.toString() == e.id);
   }
 }

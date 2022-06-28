@@ -22,11 +22,7 @@ class MockProgramsReposistory extends ProgramsRepository {
 }
 
 class MockIsFavoriteRepository extends FavoriteRepository {
-  final favorites = [
-    Program(id: "2", name: "ccc"),
-    Program(id: "4", name: "bbb"),
-    Program(id: "6", name: "aaa")
-  ];
+  final favorites = [2, 4, 6];
 
   @override
   bool isFavorite(Program program) {

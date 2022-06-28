@@ -1,4 +1,6 @@
 import 'package:get_it/get_it.dart';
+import 'package:kodprov/src/data/datasources/favorites_datasource.dart';
+import 'package:kodprov/src/data/datasources/local_favorites_datasource.dart';
 import 'package:kodprov/src/domain/usecases/get_programs_sorted_as_favorites.dart';
 import 'data/datasources/programs_datasource.dart';
 import 'domain/repositories/favorites_repository.dart';
@@ -18,6 +20,8 @@ void setupDependencies() async {
     ..registerLazySingleton<ProgramsRepository>(() => ProgramsRepositoryImpl())
     ..registerLazySingleton<ProgramsDataSource>(
         () => RemoteProgramsDataSource())
+    ..registerLazySingleton<FavoritesDataSource>(
+        () => LocalFavoritesDataSource())
     ..registerLazySingleton<GetPrograms>(() => GetPrograms())
     ..registerLazySingleton<FavoriteRepository>(() => FavoriteRepositoryImpl())
     ..registerLazySingleton<SetFavoriteProgram>(() => SetFavoriteProgram())
